@@ -36,6 +36,13 @@ Examples:
 
 ;; 6
 
+(furry-add 2 5)
+
+;; 7
+
+(wowsies "Hello! 🐰🐰🐰")
+
+;; Hello! 🐰🐰🐰
 
 ```
 
