@@ -1,6 +1,12 @@
 # Unicorn Rainbow
 
-Unicorn Rainbow is a programming language full of furry functions, witty emojies and of course 🌈🌈🌈🦄🦄🦄.
+Unicorn Rainbow is a programming language full of furry functions,
+witty emojies and of course 🌈🌈🌈🦄🦄🦄.
+
+Target user is someone who is:
+
+* 7-year old girl OR
+* Someone who just want more emojis and fun in their life
 
 ![Unicorn rainbow](rainbowunicorn.png)
 
