@@ -2,7 +2,7 @@
 
 Unicorn Rainbow is a programming language full of furry functions, witty emojies and of course 🌈🌈🌈🦄🦄🦄.
 
-![Unicorn rainbow](rainboxunicorn.png)
+![Unicorn rainbow](rainbowunicorn.png)
 
 
 ## Usage
