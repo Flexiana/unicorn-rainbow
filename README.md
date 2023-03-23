@@ -46,6 +46,12 @@ Examples:
 
 ```
 
+## Author
+
+Jiri is an happy author of this thing. He hopes you'll have no motivation to study its source code as it has been made as unreadable as possible.
+
+![Unicorn rainbow author](author.jpg)
+
 ## License
 
 Copyright © 2023
