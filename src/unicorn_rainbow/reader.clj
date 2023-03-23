@@ -26,11 +26,10 @@
                            x))
 
 (defmacro 🦄🌈 [body]
-  (let [emojis (slurp "emojis.txt")
-        emoji-pattern (create-emoji-pattern emojis)
-        cleaned-body (clojure.walk/postwalk (partial replace-emojis emoji-pattern) body)]
+  (let [
+        cleaned-body (clojure.walk/postwalk (partial replace-emojis (re-pattern (str "[" (apply str (slurp "emojis.txt")) "]"))) body)]
     (eval cleaned-body)))
 
 
-;; (println (🦄🌈 (+ 1 1 🌈 (+ 2 3 🌈))))
-;; (println (🦄🌈 (fn [🌈🌈 🌈] (+ 1 1 🌈 (+ 2 3 🌈)))))
+(println (🦄🌈 (+ 1 1 🌈 (+ 2 3 🌈))))
+(println (🦄🌈 (fn [🌈🌈 🌈] (+ 1 1 🌈 (+ 2 3 🌈)))))
