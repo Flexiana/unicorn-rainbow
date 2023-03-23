@@ -1,12 +1,7 @@
 (ns unicorn-rainbow.reader
   (:require 
-            [clojure.java.io :as io]
             [clojure.string]
             [clojure.walk]))
-
-(defn load-emojis [filename]
-  (set (map str (with-open [rdr (io/reader filename)]
-                  (doall (line-seq rdr))))))
 
 (defn create-emoji-pattern [emojis] (re-pattern (str "[" (apply str emojis) "]")))
 
@@ -22,8 +17,7 @@
       (map? coll) (into {} removed-in-coll)
       (set? coll) (into #{} removed-in-coll)
       (vector? coll) (into [] removed-in-coll)
-      (list? coll) (into '() coll)
-      :else (throw (IllegalArgumentException, "This collection type is not supported"))
+      :else removed-in-coll
       )))
 
 (defn replace-emojis [emoji-pattern x]
@@ -31,11 +25,12 @@
                            (remove-emojis-from-collection emoji-pattern x)
                            x))
 
-(defmacro ur [body]
-  (let [emojis (load-emojis "emojis.txt")
+(defmacro 🦄🌈 [body]
+  (let [emojis (slurp "emojis.txt")
         emoji-pattern (create-emoji-pattern emojis)
         cleaned-body (clojure.walk/postwalk (partial replace-emojis emoji-pattern) body)]
-    (println cleaned-body)
     (eval cleaned-body)))
 
-(ur (+ 1 1 🌈 (+ 2 3 🌈)))
+
+;; (println (🦄🌈 (+ 1 1 🌈 (+ 2 3 🌈))))
+;; (println (🦄🌈 (fn [🌈🌈 🌈] (+ 1 1 🌈 (+ 2 3 🌈)))))
