@@ -48,9 +48,11 @@ Examples:
 
 ## Author
 
-Jiri is an happy author of this thing. He hopes you'll have no motivation to study its source code as it has been made as unreadable as possible.
+Jiri is an happy author of this thing. He hopes you'll have no motivation to study its source code as it has been made as unreadable as possible. One can only speculate why we are publishing this project on April 1st.
 
 ![Unicorn rainbow author](author.jpg)
+
+Thanks for support from colleagues at Flexiana (https://flexiana.com)
 
 ## License
 
